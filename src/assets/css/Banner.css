@@ -1,0 +1,116 @@
+/* Banner.css */
+.banner-container {
+  width: 100%;
+  position: relative;
+  margin-top: 4%;
+}
+
+.carousel-slide {
+  position: relative;
+  height: 70vh;
+  /* Adjust the height as needed */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .control-dots {
+  position: absolute;
+  bottom: 0;
+  margin: -60px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 55px;
+  transform: translateY(-50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 50%;
+  text-align: left;
+}
+
+.caption h1 {
+  font-size: 48px;
+}
+
+.caption p {
+  font-size: 20px;
+  color: var(--tagline-color);
+  margin: 0%;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none;
+  padding: 10px;
+}
+
+.tagline-hero {
+  padding: 15px 140px;
+  text-align: center;
+  background-color: var(--primary-color);
+  width: 60%;
+  position: absolute;
+  left: 20%;
+  top: 89%;
+  border-radius: 50px;
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 25px;
+  box-shadow: 0px 2px 5px 0.5px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 520px) {
+  .carousel-slide {
+    height: 70vh;
+  }
+
+  .caption {
+    left: 15px;
+    padding: 3px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .caption h1 {
+    font-size: 30px;
+  }
+
+  .caption p {
+    font-size: 16px;
+  }
+
+  .carousel-slide img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel.carousel-slider .control-arrow {
+    display: none;
+  }
+
+  .tagline-hero {
+    padding: 15px 40px;
+    text-align: center;
+    background-color: var(--primary-color);
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    top: 92%;
+    border-radius: 60px;
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 16px;
+  }
+}

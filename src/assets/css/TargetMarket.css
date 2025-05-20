@@ -1,0 +1,152 @@
+
+
+.target-mobile {
+    display: none
+}
+
+.target {
+    display: flex;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    /* height: 350px; */
+    padding: 60px;
+    justify-content: space-between;
+    /* margin-bottom: 5%; */
+}
+
+.target-text {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    /* margin-top: 20px; */
+}
+
+.target-text h1 {
+    font-size: 48px;
+}
+
+.target-text p {
+    width: 68%;
+    font-size: 20px;
+    height: 160px;
+    /* margin-bottom: 100px; */
+    margin-left: 0%;
+}
+
+.target-text ul {
+    color: var(--tertiary-color);
+    font-size: 18px;
+    padding: 0;
+    margin-left: 0%;
+    margin-bottom: 10%;
+}
+
+.target-text ul li {
+    /* margin-left: 25px; */
+    margin-bottom: 10px;
+}
+
+.target-images {
+    display: flex;
+    /* margin-bottom: 5%; */
+    gap: 20px;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.target-images img {
+    width: 80px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+
+.target-images img:nth-child(1) {
+    height: 300px;
+}
+
+.target-images img:nth-child(2) {
+    height: 400px;
+}
+
+.target-images img:nth-child(3) {
+    height: 350px;
+    margin-bottom: 30px;
+}
+
+.target-images img:nth-child(4) {
+    height: 360px;
+    margin-top: 30px;
+}
+
+.target-images img:hover {
+    width: 320px;
+    height: 400px;
+    z-index: 1;
+    border-radius: 180px;
+}
+
+.target-images img.hovered~img {
+    width: 20px;
+}
+
+.target-images img.hovered {
+    width: 320px;
+    height: 400px;
+    z-index: 1;
+    border-radius: 180px;
+}
+
+.target-images img:hover~img {
+    width: 20px;
+}
+
+@media (max-width: 520px) {
+    .target {
+        display: none;
+    }
+
+    .target-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .target-text-mobile {
+        background-color: var(--tertiary-color);
+        /* height: 250px; */
+        padding: 40px 20px;
+    }
+
+    .target-text-mobile h1 {
+        color: var(--primary-color);
+        font-size: 32px;
+        /* margin-top: 20px; */
+    }
+
+    .target-text-mobile p {
+        color: var(--primary-color);
+        font-size: 18px;
+    }
+
+    .target-mobile ul {
+        padding: 40px;
+        padding-bottom: 0;
+    }
+
+    .target-mobile ul li {
+        margin-bottom: 20px;
+    }
+
+    .target-mobile ul li:nth-last-child() {
+        margin-bottom: 0px;
+    }
+
+    .target-mobile img {
+        width: 80%;
+        position: relative;
+        left: 20%;
+        bottom: 20%;
+    }
+}

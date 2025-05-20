@@ -1,0 +1,66 @@
+body {
+    background-color: #ffffff;
+    /* -webkit-user-drag: none; */
+}
+
+.App {
+    background-color: #F2F2F2;
+    /* margin-top: 4%; */
+}
+
+.mouse {
+    right: 8px;
+    position: fixed;
+    bottom: 8%;
+}
+
+@media (max-width: 520px) {
+    .mouse {
+        right: 15px;
+        bottom: 1%;
+    }
+}
+
+@keyframes verticalShake {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mouse img {
+    width: 30px;
+    animation: verticalShake 1.5s ease-in-out infinite;
+}
+
+@keyframes shakeTrigger {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.mouse img {
+    width: 30px;
+    animation: verticalShake 5s ease-in-out infinite, shakeTrigger 15s linear infinite;
+}

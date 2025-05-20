@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color: #0C2681;
+  --tertiary-color: #000000;
+  --font-color: #0C2681;
+  --secondary-font: #555;
+  --tagline-color: #f2f2f2;
+  --element-color: #3B63ED;
+  --shadow-color: #07174f9d;
+  --border-color: #1643e2;
+  --footer-color: #303030;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

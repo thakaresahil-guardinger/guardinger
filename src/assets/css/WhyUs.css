@@ -1,0 +1,173 @@
+.whyus-mobile {
+    display: none;
+}
+
+.whyus-container {
+    margin-top: 10%;
+    padding: 0 20px;
+}
+
+.whyus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.whyus-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 40px 20px 60px;
+    max-width: 60%;
+}
+
+.whyus-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color, #3B63ED);
+    margin: 0;
+}
+
+.whyus-text h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.whyus-text p {
+    font-size: 22px;
+    width: 100%;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.why-image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.why-label {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-top: -5%;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: 50px;
+    padding: 0 40px;
+}
+
+.why-content {
+    text-align: center;
+    color: var(--font-color);
+    padding: 20px 15px;
+}
+
+.why-content h1 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.why-content p {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .whyus-container {
+        margin-top: 15%;
+    }
+    
+    .whyus {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    .whyus-text {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .whyus-text h1 {
+        font-size: 36px;
+    }
+    
+    .whyus-text h2 {
+        font-size: 24px;
+    }
+    
+    .whyus-text p {
+        font-size: 18px;
+        width: 100%;
+    }
+    
+    .why-image {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+    
+    .why-label {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 0;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .whyus {
+        display: none;
+    }
+
+    .whyus-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .whyus-mobile-text {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .whyus-mobile-text h1 {
+        font-size: 32px;
+        font-weight: bold;
+        color: var(--primary-color, #3B63ED);
+        margin: 0 0 10px 0;
+    }
+
+    .whyus-mobile-text h2 {
+        font-size: 20px;
+        margin: 0 0 15px 0;
+    }
+
+    .whyus-mobile-text p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .why-label {
+        background: url("../img/whyUsMobile.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 0;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        gap: 20px;
+        padding: 15px;
+        grid-template-columns: 1fr;
+    }
+}
