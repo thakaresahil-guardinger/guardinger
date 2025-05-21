@@ -72,7 +72,7 @@ export default function Achievements() {
                 <img
                   src={item.imgUrl}
                   alt={item.title || "achievement"}
-                  className="w-full h-56 object-cover bg-gray-100"
+                  className="w-full h-56 object-fill bg-gray-100"
                   onError={(e) => (e.currentTarget.style.display = "none")}
                 />
               )}

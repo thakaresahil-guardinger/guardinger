@@ -36,7 +36,13 @@ const BannerWrapper = () => {
   const handleSwiperComplete = () => setShowIntro(true);
 
   return (
-    <div className={`w-full ${showIntro ? "min-h-[60vh] md:min-h-[90vh]" : "min-h-[50vh] md:min-h-[90vh]"} flex items-center justify-center relative bg-gradient-to-br from-[#f7f7fa] via-[#f0f0ff] to-[#f7f7fa] overflow-hidden  transition-all duration-[600ms] delay-[400ms]`}>
+    <div
+      className={`w-full ${
+        showIntro
+          ? "min-h-[540px] md:min-h-[90vh]"
+          : "min-h-[430px] md:min-h-[90vh]"
+      } flex items-center justify-center relative bg-gradient-to-br from-[#f7f7fa] via-[#f0f0ff] to-[#f7f7fa] overflow-hidden  transition-all duration-[700ms] delay-[500ms]`}
+    >
       <AnimatePresence mode="wait">
         {showIntro ? (
           <motion.div
@@ -162,31 +168,41 @@ const IntroSlide = ({ images, windowWidth }) => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="mb-4 leading-tight font-sora"
+        className="mb-4 leading-tight font-sora flex flex-col sm:flex-row sm:flex-wrap md:items-end items-center"
       >
-        <span className={`${textSizes.firstText} font-bold`}>
-          Conceptualise
+        <span>
+          <span className={`${textSizes.firstText} font-bold`}>
+            Conceptualise
+          </span>
+          <span className={`text-blue-600 ${textSizes.firstText} font-bold`}>
+            .
+          </span>{" "}
         </span>
-        <span className={`text-blue-600 ${textSizes.firstText} font-bold`}>
-          .
-        </span>{" "}
-        <span className={`${textSizes.designText} font-bold`}> Design </span>{" "}
-        <span className={`text-blue-600 ${textSizes.designText} font-bold`}>
-          .
-        </span>{" "}
-        <span className={`text-black ${textSizes.developText} font-bold`}>
-          Develop
-        </span>{" "}
-        <span className={`text-blue-600 ${textSizes.developText} font-bold`}>
-          .
-        </span>{" "}
-        <span
-          className={`bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text ${textSizes.excellenceText} font-bold`}
-        >
-          Deliver Excellence
+        <span>
+          <span className={`${textSizes.designText} font-bold`}>Design</span>{" "}
+          <span className={`text-blue-600 ${textSizes.designText} font-bold`}>
+            .
+          </span>{" "}
         </span>
-        <span className={`text-blue-600 ${textSizes.excellenceText} font-bold`}>
-          .
+        <span>
+          <span className={`text-black ${textSizes.developText} font-bold`}>
+            Develop
+          </span>{" "}
+          <span className={`text-blue-600 ${textSizes.developText} font-bold`}>
+            .
+          </span>{" "}
+        </span>
+        <span>
+          <span
+            className={`bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text ${textSizes.excellenceText} font-bold`}
+          >
+            Deliver Excellence
+          </span>
+          <span
+            className={`text-blue-600 ${textSizes.excellenceText} font-bold`}
+          >
+            .
+          </span>
         </span>
       </motion.h1>
 
@@ -204,11 +220,11 @@ const IntroSlide = ({ images, windowWidth }) => {
         transition={{ delay: 0.8, duration: 0.6 }}
         className={`${textSizes.descriptionText} text-gray-900 max-w-[95%] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mb-4 sm:mb-6 font-inter`}
       >
-        Advanced Edge Computer Based Sensor Suite for Strategic Application
-        | Design and Fabrication of Electromechanical Systems & Test Rigs |
-        Underwater Technology Solutions for Strategies Application | 
-        Advanced Softwares for Engineering & Strategic Applications | Climate Sciences and
-        Weather Services — all powered by intelligent software, built for
+        Advanced Edge Computer Based Sensor Suite for Strategic Application |
+        Design and Fabrication of Electromechanical Systems & Test Rigs |
+        Underwater Technology Solutions for Strategies Application | Advanced
+        Softwares for Engineering & Strategic Applications | Climate Sciences
+        and Weather Services — all powered by intelligent software, built for
         precision in the toughest environments.
       </motion.p>
 

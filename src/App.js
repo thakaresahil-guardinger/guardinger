@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <div className="h-20 md:h-14 bg-white" />
+        <div className="h-[80px] md:h-14 bg-white" />
         <ScrollToTop />
         <Routes>
           <Route

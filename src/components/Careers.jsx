@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import plansvg from "../assets/img/background/plansvg.svg";
 import { jobs } from "../utils/constants";
 import { lag1, lag2, lag3 } from "../assets/img/lifeatgat";
-import productive from "../assets/img/background/productive.jpeg";
+import productive from "../assets/img/background/productive.jpg";
 import career from "../assets/img/background/career.jpg";
-import teamwork from "../assets/img/background/teamwork.jpeg";
+import teamwork from "../assets/img/background/teamwork.jpg";
 
 export default function Careers() {
   const [selectedJob, setSelectedJob] = useState(null);

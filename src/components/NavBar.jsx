@@ -93,7 +93,7 @@ export default function NavBar() {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex items-center justify-between h-20 px-4 md:px-8 lg:px-16">
+      <div className="flex items-center justify-between h-[80px] px-4 md:px-8 lg:px-16">
         {/* Logo */}
         <div onClick={() => handleNav("/")} className="cursor-pointer">
           <img src={logo} alt="Guardinger" className="h-12 md:h-16" />
@@ -120,7 +120,7 @@ export default function NavBar() {
             Delivered Excellence
           </button>
           <button
-            onClick={() => navigate("/ourexperties")}
+            onClick={() => handleNav("/ourexperties")}
             className="text-base text-gray-700 hover:text-indigo-600"
           >
             Expertise
@@ -188,7 +188,7 @@ export default function NavBar() {
           </li>
           <li>
             <button
-              onClick={() => navigate("/ourexperties")}
+              onClick={() => handleNav("/ourexperties")}
               className="text-base text-gray-700 hover:text-indigo-600"
             >
               Experties
