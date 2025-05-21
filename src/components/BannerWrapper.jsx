@@ -36,7 +36,7 @@ const BannerWrapper = () => {
   const handleSwiperComplete = () => setShowIntro(true);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center relative bg-gradient-to-br from-[#f7f7fa] via-[#f0f0ff] to-[#f7f7fa] overflow-hidden">
+    <div className={`w-full ${showIntro ? "min-h-[60vh] md:min-h-[90vh]" : "min-h-[50vh] md:min-h-[90vh]"} flex items-center justify-center relative bg-gradient-to-br from-[#f7f7fa] via-[#f0f0ff] to-[#f7f7fa] overflow-hidden  transition-all duration-[600ms] delay-[400ms]`}>
       <AnimatePresence mode="wait">
         {showIntro ? (
           <motion.div
@@ -157,7 +157,7 @@ const IntroSlide = ({ images, windowWidth }) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-wrap flex-col items-center justify-center px-4 text-center">
+    <div className="w-full h-full  flex flex-wrap flex-col items-center justify-center px-4 text-center">
       <motion.h1
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

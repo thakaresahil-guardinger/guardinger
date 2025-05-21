@@ -174,7 +174,7 @@ export default function WhyUs() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 md:mt-64 md:py-24 flex flex-col gap-12">
+    <div className="container mx-auto px-4 py-12  md:py-24 flex flex-col gap-12">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <h1

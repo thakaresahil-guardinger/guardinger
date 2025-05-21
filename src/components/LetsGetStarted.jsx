@@ -100,7 +100,7 @@ export default function Letsgetstarted() {
       style={{ backgroundImage: `url(${letsConnect})` }}
     >
       {/* Content container: full‑width on mobile, constrained on md+ */}
-      <div className="py-24 sm:px-6 md:px-16 lg:px-24">
+      <div className="py-12 md:py-24 sm:px-6 md:px-16 lg:px-24">
         {/* Headings */}
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#E1A0EE] text-4xl sm:text-5xl md:text-6xl font-bold font-sora">
           Let's Get Started
@@ -115,7 +115,7 @@ export default function Letsgetstarted() {
         </p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 md:pt-12">
           {cards.map((card) => (
             <div
               key={card.id}
@@ -128,24 +128,31 @@ export default function Letsgetstarted() {
                 className={`relative transition-transform duration-500 ease-in-out ${card.contentAnimation}`}
               >
                 {!card.imageBottom && (
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full mb-4 rounded-lg"
-                  />
+                  <div className="w-full mb-4 rounded-lg overflow-hidden h-28 md:h-full">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 )}
+
                 <h3 className="text-white text-xl font-semibold mb-2">
                   {card.title}
                 </h3>
+
                 <p className="text-[#D0CEFF] text-sm sm:text-base">
                   {card.description}
                 </p>
+
                 {card.imageBottom && (
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="w-full rounded-lg mt-4"
-                  />
+                  <div className="w-full mt-4 rounded-lg overflow-hidden h-28 md:h-full">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 )}
               </div>
 

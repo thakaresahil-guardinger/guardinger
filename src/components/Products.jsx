@@ -57,9 +57,18 @@ export default function Products() {
 
 // Separated product card component to better manage state
 function ProductCard({ product, onExplore }) {
+  const [showFull, setShowFull] = useState(false);
+
+  const getShortDescription = (text, wordLimit) => {
+    const words = text.split(" ");
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(" ") + "..."
+      : text;
+  };
+
   return (
     <div
-      className="relative bg-white backdrop-blur-md rounded-2xl shadow-md p-6 w-full max-w-lg flex flex-col justify-between "
+      className="relative bg-white backdrop-blur-md rounded-2xl shadow-md p-6 w-full max-w-lg flex flex-col justify-between"
       style={{
         backgroundImage: `url(${product.background})`,
         backgroundSize: "cover",
@@ -67,6 +76,7 @@ function ProductCard({ product, onExplore }) {
       }}
     >
       <div>
+        {/* Title */}
         <div className="flex items-center">
           <div
             className="w-10 h-10 
@@ -77,20 +87,33 @@ function ProductCard({ product, onExplore }) {
             {product.id}
           </div>
 
-          <h3 className="ml-2 text-lg md:text-xl font-semibold text-[#070e58]  transition-colors">
+          <h3 className="ml-2 text-lg md:text-xl font-semibold text-[#070e58] transition-colors">
             {product.heading}
           </h3>
         </div>
 
-        <p className="mt-2 text-sm   text-black leading-relaxed text-justify font-inter transition-colors">
-          {product.description}
+        {/* Description */}
+        <p className="mt-2 text-sm text-black leading-relaxed text-justify font-inter transition-colors">
+          {showFull
+            ? product.description
+            : getShortDescription(product.description, 14)}
+          {product.description.split(" ").length > 14 && (
+            <button
+              className="text-sm text-blue-700 hover:underline"
+              onClick={() => setShowFull(!showFull)}
+            >
+              {showFull ? "Read Less" : "Read More"}
+            </button>
+          )}
         </p>
+
+        {/* Toggle Button */}
       </div>
 
       {/* Explore More */}
       <button
         onClick={() => onExplore(product.id)}
-        className=" inline-flex items-center text-black font-medium hover:underline font-inter relative z-10  transition-colors"
+        className="mt-4 inline-flex items-center text-black font-medium hover:underline font-inter relative z-10 transition-colors"
       >
         Explore More&nbsp;
         <RiArrowRightSFill />

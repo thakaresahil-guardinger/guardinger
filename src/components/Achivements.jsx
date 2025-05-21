@@ -35,29 +35,29 @@ export default function Achievements() {
 
   return (
     <div
-      className="w-full py-20  mt-20 bg-cover bg-no-repeat flex justify-center bg-gray-200" id="events"
+      className="w-full py-14 md:py-20 mt-0 md:mt-20 bg-cover bg-no-repeat flex justify-center bg-gray-200" id="events"
       // style={{ backgroundImage: `url(${paperbackground})` }}
     >
       <div className="flex flex-col items-center w-full">
         {/* Header */}
-        <div className="text-left mb-10 px-2">
+        <div className="text-left md:mb-10 px-2">
           <h2 className="text-3xl font-semibold text-gray-800 leading-tight tracking-tight">
             EVENTS & <br className="sm:hidden" />
             <span className="text-3xl md:text-6xl font-bold text-gray-900">
               ENGAGEMENTS
             </span>
           </h2>
-          <p className="mt-4 text-gray-600 text-base sm:text-lg max-w-2xl text-center">
+          <p className="md:mt-4 text-gray-600 text-base sm:text-lg max-w-2xl text-left md:text-center">
             Showcasing Our Achievements, Milestones, and Notable Representations
           </p> 
         </div>
 
         {/* Cards */}
-        <div className="flex flex-wrap justify-center gap-6 transition-all duration-500 sm:overflow-hidden overflow-x-auto px-2">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-6 transition-all duration-500 sm:overflow-hidden overflow-x-auto px-2">
           {visibleEvents.map((item) => (
             <div
               key={item.id}
-              className="w-64 bg-white border border-gray-200 shadow-sm hover:shadow-lg overflow-hidden transition-all duration-300 cursor-pointer"
+              className="md:w-64 w-full rounded-md bg-white border border-gray-200 shadow-sm hover:shadow-lg overflow-hidden transition-all duration-300 cursor-pointer"
               onClick={() => handleCardClick(item.id)}
             >
               <div className="p-3 flex justify-between items-center text-xs text-black">
@@ -76,7 +76,7 @@ export default function Achievements() {
                   onError={(e) => (e.currentTarget.style.display = "none")}
                 />
               )}
-              <div className="p-4">
+              <div className="p-3">
                 <h3 className="text-base font-semibold text-gray-800 mb-2 line-clamp-2">
                   {item.title}
                 </h3>

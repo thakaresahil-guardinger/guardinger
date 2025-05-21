@@ -56,7 +56,7 @@ export default function FooterPage() {
       <div className="h-1 bg-gradient-to-r from-purple-500 to-blue-500 shadow-md shadow-purple-200 mx-6 md:mx-32" />
 
       {/* Bottom Grid */}
-      <div className="md:hidden">
+      <div className="md:hidden mx-4 mt-6">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10">
           {/* Products Section */}
           <div className="flex flex-col gap-2">

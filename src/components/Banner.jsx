@@ -231,8 +231,8 @@ const SwiperBanner = ({
   };
 
   return (
-    <div className="w-full h-[70vh] md:h-[95vh] flex items-center">
-      <div className="w-full h-[70vh] md:h-[95vh]  px-2 pt-16 sm:pt-18 md:pt-10 sm:px-4 md:px-6 lg:px-10 pb-6 sm:pb-8 md:pb-10 flex flex-col items-center justify-center">
+    <div className="w-full  md:h-[95vh] flex items-center">
+      <div className="w-full md:h-[95vh]  px-2 pt-8 sm:pt-18 md:pt-10 sm:px-4 md:px-6 lg:px-10 pb-6 sm:pb-8 md:pb-10 flex flex-col items-center justify-center">
         {/* Title and description section */}
         <div className="text-center sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mb-2 sm:mb-3 md:mb-4 space-y-1 sm:space-y-2 px-1 sm:px-2 min-h-[40px] sm:min-h-[60px] md:min-h-[60px]">
           <h2 className={getAnimatedTextClasses(true)}>

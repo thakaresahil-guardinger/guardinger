@@ -8,7 +8,7 @@ const ProductHeader = ({ heading, subheading, description }) => {
   const navigate = useNavigate();
   return (
     <header className="md:space-y-2">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col justify-between md:flex-row items-center">
         <h1 className="text-4xl md:text-6xl font-bold font-sora text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
           {headingWords}
         </h1>
@@ -76,7 +76,7 @@ const ProductDetails = ({ details }) => {
       >
         Product Description
       </h3>
-      <div className="md:space-y-12">
+      <div className="space-y-4 md:space-y-12">
         {details.map((detail, index) => (
           <DetailItem
             key={index}
@@ -310,7 +310,7 @@ export default function Product() {
 
   return (
     <main className="bg-white md:py-16 md:px-4 lg:px-12 xl:px-40">
-      <div className="flex flex-col mx-2 md:mx-8 lg:mx-20 xl:mx-40 gap-8  md:mt-0">
+      <div className="flex flex-col mx-2 md:mx-8 lg:mx-20 xl:mx-40 gap-4 md:gap-8   md:mt-0">
         <ProductHeader
           heading={heading}
           subheading={subheading}
